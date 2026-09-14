@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Script - Nome do Jogo 2</title>
+  <title>Script - Namesis Hub</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -17,28 +17,27 @@
   <div class="ad-slot ad-top container">
     <script>
       atOptions = {
-        'key' : 'fffd92b87d771c187886a5d15e1b05a8',
+        'key' : 'c13e1cb95af52d818808e660fa9c509e',
         'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
+        'height' : 60,
+        'width' : 468,
         'params' : {}
       };
     </script>
-    <script src="https://www.highrevenueformat.com/fffd92b87d771c187886a5d15e1b05a8/invoke.js"></script>
+    <script src="https://www.highrevenueformat.com/c13e1cb95af52d818808e660fa9c509e/invoke.js"></script>
   </div>
 
   <main class="container script-page">
     <a href="../index.html">&larr; Voltar</a>
-    <h1 style="margin: 16px 0;">Script - Nome do Jogo 2</h1>
-    <p>Descreva aqui o que o script faz: auto-farm, ESP, speed hack etc. Isso também
-    ajuda a página a não ficar "vazia" (bom pra aprovação em rede de anúncio e pro Google).</p>
+    <h1 style="margin: 16px 0;">Namesis Hub</h1>
+    <p>Script Namesis Hub.</p>
 
     <div class="ad-slot ad-middle">
       <span class="ad-placeholder">[ Espaço de anúncio - Meio ]</span>
     </div>
 
     <div class="script-box">
-      <div class="script-code" id="scriptCode">loadstring(game:HttpGet("https://exemplo.com/seuscript.lua"))()</div>
+      <div class="script-code" id="scriptCode">loadstring(game:HttpGet("https://raw.githubusercontent.com/x2zu/loader/main/freeloader.lua", true))()</div>
       <button class="copy-btn" id="copyBtn" disabled>Aguarde 10s...</button>
       <p class="timer-text" id="timerText">O botão libera em alguns segundos.</p>
     </div>
@@ -52,7 +51,6 @@
     let seconds = 10;
     const btn = document.getElementById('copyBtn');
     const timerText = document.getElementById('timerText');
-
     const interval = setInterval(() => {
       seconds--;
       if (seconds <= 0) {
@@ -64,7 +62,6 @@
         btn.textContent = `Aguarde ${seconds}s...`;
       }
     }, 1000);
-
     btn.addEventListener('click', () => {
       const code = document.getElementById('scriptCode').textContent;
       navigator.clipboard.writeText(code).then(() => {
