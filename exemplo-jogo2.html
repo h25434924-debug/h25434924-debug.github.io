@@ -14,9 +14,17 @@
     </div>
   </header>
 
-  <!-- ESPAÇO DE ANÚNCIO - Topo da página de script -->
   <div class="ad-slot ad-top container">
-    <span class="ad-placeholder">[ Espaço de anúncio - Topo ]</span>
+    <script>
+      atOptions = {
+        'key' : 'fffd92b87d771c187886a5d15e1b05a8',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script src="https://www.highrevenueformat.com/fffd92b87d771c187886a5d15e1b05a8/invoke.js"></script>
   </div>
 
   <main class="container script-page">
@@ -25,7 +33,6 @@
     <p>Descreva aqui o que o script faz: auto-farm, ESP, speed hack etc. Isso também
     ajuda a página a não ficar "vazia" (bom pra aprovação em rede de anúncio e pro Google).</p>
 
-    <!-- ESPAÇO DE ANÚNCIO - Meio, antes de liberar o script -->
     <div class="ad-slot ad-middle">
       <span class="ad-placeholder">[ Espaço de anúncio - Meio ]</span>
     </div>
@@ -42,7 +49,6 @@
   </footer>
 
   <script>
-    // Timer simples: libera o botão de copiar depois de alguns segundos
     let seconds = 10;
     const btn = document.getElementById('copyBtn');
     const timerText = document.getElementById('timerText');
