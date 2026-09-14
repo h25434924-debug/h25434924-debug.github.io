@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Script - Namesis Hub</title>
+  <title>Script - Steel Egg (Namesis Hub)</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -29,8 +29,8 @@
 
   <main class="container script-page">
     <a href="../index.html">&larr; Voltar</a>
-    <h1 style="margin: 16px 0;">Namesis Hub</h1>
-    <p>Script Namesis Hub.</p>
+    <h1 style="margin: 16px 0;">Steel Egg - Namesis Hub</h1>
+    <p>Script Namesis Hub para Steel Egg.</p>
 
     <div class="ad-slot ad-middle">
       <span class="ad-placeholder">[ Espaço de anúncio - Meio ]</span>
