@@ -14,59 +14,7 @@
     </div>
   </header>
 
-  <!-- ESPAÇO DE ANÚNCIO - Topo da página de script -->
   <div class="ad-slot ad-top container">
-    <span class="ad-placeholder">[ Espaço de anúncio - Topo ]</span>
-  </div>
-
-  <main class="container script-page">
-    <a href="../index.html">&larr; Voltar</a>
-    <h1 style="margin: 16px 0;">Script - Nome do Jogo 1</h1>
-    <p>Descreva aqui o que o script faz: auto-farm, ESP, speed hack etc. Isso também
-    ajuda a página a não ficar "vazia" (bom pra aprovação em rede de anúncio e pro Google).</p>
-
-    <!-- ESPAÇO DE ANÚNCIO - Meio, antes de liberar o script -->
-    <div class="ad-slot ad-middle">
-      <span class="ad-placeholder">[ Espaço de anúncio - Meio ]</span>
-    </div>
-
-    <div class="script-box">
-      <div class="script-code" id="scriptCode">loadstring(game:HttpGet("https://exemplo.com/seuscript.lua"))()</div>
-      <button class="copy-btn" id="copyBtn" disabled>Aguarde 10s...</button>
-      <p class="timer-text" id="timerText">O botão libera em alguns segundos.</p>
-    </div>
-  </main>
-
-  <footer class="site-footer container">
-    <p>Este site não é afiliado à Roblox Corporation. Scripts fornecidos apenas para fins educacionais.</p>
-  </footer>
-
-  <script>
-    // Timer simples: libera o botão de copiar depois de alguns segundos
-    let seconds = 10;
-    const btn = document.getElementById('copyBtn');
-    const timerText = document.getElementById('timerText');
-
-    const interval = setInterval(() => {
-      seconds--;
-      if (seconds <= 0) {
-        clearInterval(interval);
-        btn.disabled = false;
-        btn.textContent = 'Copiar Script';
-        timerText.textContent = 'Pronto! Clique para copiar.';
-      } else {
-        btn.textContent = `Aguarde ${seconds}s...`;
-      }
-    }, 1000);
-
-    btn.addEventListener('click', () => {
-      const code = document.getElementById('scriptCode').textContent;
-      navigator.clipboard.writeText(code).then(() => {
-        btn.textContent = 'Copiado!';
-        setTimeout(() => { btn.textContent = 'Copiar Script'; }, 2000);
-      });
-    });
-  </script>
-
-</body>
-</html>
+    <script>
+      atOptions = {
+        'key' : 'fffd92b87d771c187886a5d15e1b05a8',
