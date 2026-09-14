@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Script - Steel Egg (Namesis Hub)</title>
+  <title>Script - Solix Hub</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -29,17 +29,22 @@
 
   <main class="container script-page">
     <a href="../index.html">&larr; Voltar</a>
-    <h1 style="margin: 16px 0;">Steel Egg - Namesis Hub</h1>
-    <p>Script Namesis Hub para Steel Egg.</p>
+    <h1 style="margin: 16px 0;">Solix Hub</h1>
+    <p>Hub com suporte a Blox Fruits e outros jogos. Este script exige uma "key" (chave)
+    gratuita obtida diretamente no site oficial da Solixhub (via anúncio) antes de rodar.</p>
 
     <div class="ad-slot ad-middle">
       <span class="ad-placeholder">[ Espaço de anúncio - Meio ]</span>
     </div>
 
     <div class="script-box">
-      <div class="script-code" id="scriptCode">loadstring(game:HttpGet("https://raw.githubusercontent.com/x2zu/loader/main/freeloader.lua", true))()</div>
+      <div class="script-code" id="scriptCode">loadstring(game:HttpGet("https://solixhub.com/loader"))()</div>
       <button class="copy-btn" id="copyBtn" disabled>Aguarde 10s...</button>
       <p class="timer-text" id="timerText">O botão libera em alguns segundos.</p>
+      <p style="margin-top:12px; font-size:0.85rem; color:#999;">
+        Precisa de uma key? Pegue gratuitamente em
+        <a href="https://solixhub.com/free/" style="color:#a29bfe;">solixhub.com/free</a>
+      </p>
     </div>
   </main>
 
