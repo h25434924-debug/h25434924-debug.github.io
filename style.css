@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #08040a;
+  --surface: #120a16;
+  --border: #2a1a30;
+  --text: #f2eefc;
+  --text-muted: #a99bb8;
+  --neon-pink: #ff2fd6;
+  --neon-purple: #b026ff;
+  --glow: 0 0 12px rgba(255, 47, 214, 0.55), 0 0 28px rgba(176, 38, 255, 0.35);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,160 +18,243 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #0f1117;
-  color: #e6e6e6;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: radial-gradient(ellipse at top, #170a1e 0%, #08040a 60%);
+  color: var(--text);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
+/* Header */
+
 .site-header {
-  background: linear-gradient(135deg, #1a1d29, #2a2d3e);
-  padding: 40px 0;
+  padding: 64px 0 40px;
   text-align: center;
-  border-bottom: 3px solid #6c5ce7;
 }
 
 .site-header h1 {
-  font-size: 2rem;
-  margin-bottom: 8px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--neon-pink);
+  text-shadow: var(--glow);
+  letter-spacing: 0.01em;
 }
 
 .site-header p {
-  color: #aaa;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
+/* Ad slots */
+
 .ad-slot {
-  margin: 24px auto;
+  margin: 28px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90px;
-  background: #1a1d29;
-  border: 1px dashed #444;
-  border-radius: 6px;
+  min-height: 60px;
 }
 
 .ad-placeholder {
-  color: #666;
-  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  opacity: 0.6;
 }
+
+/* Intro */
 
 .intro {
-  padding: 24px 0 8px;
+  padding: 28px 0 8px;
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Script cards */
+
 .scripts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 32px 0;
 }
 
 .script-card {
-  display: block;
-  background: #1a1d29;
-  border: 1px solid #2a2d3e;
-  border-radius: 8px;
-  padding: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s, transform 0.2s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .script-card:hover {
-  border-color: #6c5ce7;
-  transform: translateY(-2px);
+  border-color: var(--neon-pink);
+  box-shadow: var(--glow);
 }
 
 .script-card h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
   font-size: 1.1rem;
-  margin-bottom: 6px;
-  color: #a29bfe;
+  color: var(--text);
 }
 
 .script-card p {
-  font-size: 0.85rem;
-  color: #999;
+  font-size: 0.78rem;
+  color: var(--neon-purple);
+  white-space: nowrap;
 }
 
+/* Community */
+
 .community {
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
   text-align: center;
-  padding: 40px 0;
+}
+
+.community h2 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--neon-pink);
+  margin-bottom: 8px;
+}
+
+.community p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 50ch;
+  margin: 0 auto;
 }
 
 .discord-btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 12px 28px;
-  background: #5865F2;
-  color: white;
+  margin-top: 18px;
+  padding: 11px 26px;
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+  color: #0a0410;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--glow);
 }
+
+.discord-btn:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
 
 .site-footer {
   text-align: center;
-  padding: 30px 0;
-  color: #666;
-  font-size: 0.8rem;
-  border-top: 1px solid #2a2d3e;
-  margin-top: 40px;
+  padding: 32px 0 56px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
 }
 
 .site-footer a {
-  color: #888;
+  color: var(--text-muted);
+  text-decoration: underline;
 }
 
-/* Página de script individual */
+/* Script page */
+
 .script-page {
-  padding: 30px 0;
+  padding: 40px 0;
+}
+
+.script-page > a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.script-page > a:hover {
+  color: var(--neon-pink);
+}
+
+.script-page h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--neon-pink);
+  text-shadow: var(--glow);
+  margin-top: 8px;
+}
+
+.script-page > p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 55ch;
+  margin-top: 6px;
 }
 
 .script-box {
-  background: #1a1d29;
-  border: 1px solid #2a2d3e;
-  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
   padding: 20px;
-  margin: 20px 0;
-  position: relative;
+  margin: 24px 0;
 }
 
 .script-code {
-  background: #0a0b0f;
-  padding: 16px;
-  border-radius: 6px;
+  background: #0d0611;
+  border: 1px solid var(--border);
+  padding: 14px 16px;
+  border-radius: 8px;
   overflow-x: auto;
-  font-family: 'Consolas', monospace;
-  font-size: 0.85rem;
+  font-family: "SF Mono", "Consolas", monospace;
+  font-size: 0.8rem;
   white-space: pre-wrap;
   word-break: break-word;
+  color: var(--neon-purple);
 }
 
 .copy-btn {
   margin-top: 14px;
   padding: 10px 20px;
-  background: #6c5ce7;
-  color: white;
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+  color: #0a0410;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .copy-btn:disabled {
-  background: #444;
+  background: var(--border);
+  color: var(--text-muted);
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 .timer-text {
-  font-size: 0.85rem;
-  color: #999;
+  font-size: 0.8rem;
+  color: var(--text-muted);
   margin-top: 8px;
 }
