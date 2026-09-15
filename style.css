@@ -38,6 +38,43 @@ body {
   padding: 0 24px;
 }
 
+/* Marquee - faixa de texto passando */
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  background: rgba(176, 38, 255, 0.05);
+}
+
+.marquee__track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-scroll 22s linear infinite;
+}
+
+.marquee__track span {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 0.9rem;
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px rgba(255, 47, 214, 0.5);
+  margin-right: 48px;
+  letter-spacing: 0.03em;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}
+
 /* Header */
 
 .site-header {
